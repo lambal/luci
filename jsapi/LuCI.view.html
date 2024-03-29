@@ -49,6 +49,8 @@
             
                 <li data-name="LuCI#env"><a href="LuCI.html#env">env</a></li>
             
+                <li data-name="LuCI#naturalCompare"><a href="LuCI.html#naturalCompare">naturalCompare</a></li>
+            
                 <li data-name="LuCI#Poll"><a href="LuCI.html#Poll">Poll</a></li>
             
                 <li data-name="LuCI#Request"><a href="LuCI.html#Request">Request</a></li>
@@ -105,6 +107,8 @@
                 <li data-name="LuCI#resource"><a href="LuCI.html#resource">resource</a></li>
             
                 <li data-name="LuCI#run"><a href="LuCI.html#run">run</a></li>
+            
+                <li data-name="LuCI#sortedArray"><a href="LuCI.html#sortedArray">sortedArray</a></li>
             
                 <li data-name="LuCI#sortedKeys"><a href="LuCI.html#sortedKeys">sortedKeys</a></li>
             
@@ -815,6 +819,10 @@
             
                 <li data-name="LuCI.form.FlagValue##enabled"><a href="LuCI.form.FlagValue.html#enabled">enabled</a></li>
             
+                <li data-name="LuCI.form.FlagValue##tooltip"><a href="LuCI.form.FlagValue.html#tooltip">tooltip</a></li>
+            
+                <li data-name="LuCI.form.FlagValue##tooltipicon"><a href="LuCI.form.FlagValue.html#tooltipicon">tooltipicon</a></li>
+            
                 <li data-name="LuCI.form.FlagValue#datatype"><a href="LuCI.form.FlagValue.html#datatype">datatype</a></li>
             
                 <li data-name="LuCI.form.FlagValue#default"><a href="LuCI.form.FlagValue.html#default">default</a></li>
@@ -930,10 +938,6 @@
                 <li data-name="LuCI.form.GridSection#sortable"><a href="LuCI.form.GridSection.html#sortable">sortable</a></li>
             
                 <li data-name="LuCI.form.GridSection#tabbed"><a href="LuCI.form.GridSection.html#tabbed">tabbed</a></li>
-            
-                <li data-name="LuCI.form.GridSection#tooltip"><a href="LuCI.form.GridSection.html#tooltip">tooltip</a></li>
-            
-                <li data-name="LuCI.form.GridSection#tooltipicon"><a href="LuCI.form.GridSection.html#tooltipicon">tooltipicon</a></li>
             
                 <li data-name="LuCI.form.GridSection#uciconfig"><a href="LuCI.form.GridSection.html#uciconfig">uciconfig</a></li>
             
@@ -1541,12 +1545,6 @@
             
             <span class="subtitle">Members</span>
             
-                <li data-name="LuCI.form.TableSection##addbtntitle"><a href="LuCI.form.TableSection.html#addbtntitle">addbtntitle</a></li>
-            
-                <li data-name="LuCI.form.TableSection##addremove"><a href="LuCI.form.TableSection.html#addremove">addremove</a></li>
-            
-                <li data-name="LuCI.form.TableSection##anonymous"><a href="LuCI.form.TableSection.html#anonymous">anonymous</a></li>
-            
                 <li data-name="LuCI.form.TableSection##extedit"><a href="LuCI.form.TableSection.html#extedit">extedit</a></li>
             
                 <li data-name="LuCI.form.TableSection##max_cols"><a href="LuCI.form.TableSection.html#max_cols">max_cols</a></li>
@@ -1561,8 +1559,6 @@
             
                 <li data-name="LuCI.form.TableSection##sortable"><a href="LuCI.form.TableSection.html#sortable">sortable</a></li>
             
-                <li data-name="LuCI.form.TableSection##uciconfig"><a href="LuCI.form.TableSection.html#uciconfig">uciconfig</a></li>
-            
                 <li data-name="LuCI.form.TableSection#addbtntitle"><a href="LuCI.form.TableSection.html#addbtntitle">addbtntitle</a></li>
             
                 <li data-name="LuCI.form.TableSection#addremove"><a href="LuCI.form.TableSection.html#addremove">addremove</a></li>
@@ -1572,10 +1568,6 @@
                 <li data-name="LuCI.form.TableSection#parentoption"><a href="LuCI.form.TableSection.html#parentoption">parentoption</a></li>
             
                 <li data-name="LuCI.form.TableSection#tabbed"><a href="LuCI.form.TableSection.html#tabbed">tabbed</a></li>
-            
-                <li data-name="LuCI.form.TableSection#tooltip"><a href="LuCI.form.TableSection.html#tooltip">tooltip</a></li>
-            
-                <li data-name="LuCI.form.TableSection#tooltipicon"><a href="LuCI.form.TableSection.html#tooltipicon">tooltipicon</a></li>
             
                 <li data-name="LuCI.form.TableSection#uciconfig"><a href="LuCI.form.TableSection.html#uciconfig">uciconfig</a></li>
             
@@ -1738,10 +1730,6 @@
                 <li data-name="LuCI.form.TypedSection##anonymous"><a href="LuCI.form.TypedSection.html#anonymous">anonymous</a></li>
             
                 <li data-name="LuCI.form.TypedSection##tabbed"><a href="LuCI.form.TypedSection.html#tabbed">tabbed</a></li>
-            
-                <li data-name="LuCI.form.TypedSection##tooltip"><a href="LuCI.form.TypedSection.html#tooltip">tooltip</a></li>
-            
-                <li data-name="LuCI.form.TypedSection##tooltipicon"><a href="LuCI.form.TypedSection.html#tooltipicon">tooltipicon</a></li>
             
                 <li data-name="LuCI.form.TypedSection##uciconfig"><a href="LuCI.form.TypedSection.html#uciconfig">uciconfig</a></li>
             
@@ -3555,7 +3543,7 @@ set of methods to inherit from.</p></div>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1925">line 1925</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1927">line 1927</a>
         </div>
         
     </div>
@@ -3640,7 +3628,7 @@ set of methods to inherit from.</p></div>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2152">line 2152</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2154">line 2154</a>
         </div>
         
     </div>
@@ -3753,7 +3741,7 @@ methods are overwritten with <code>null</code>.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2118">line 2118</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2120">line 2120</a>
         </div>
         
     </div>
@@ -3895,7 +3883,7 @@ with <code>null</code>.</p>
             <td class="description last">Any return values of this function are discarded, but
 passed through <code>Promise.resolve()</code> to ensure that any
 returned promise runs to completion before the button
-is reenabled.</td>
+is re-enabled.</td>
         </tr>
     
     </tbody>
@@ -3917,7 +3905,7 @@ is reenabled.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2037">line 2037</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2039">line 2039</a>
         </div>
         
     </div>
@@ -4059,7 +4047,7 @@ with <code>null</code>.</p>
             <td class="description last">Any return values of this function are discarded, but
 passed through <code>Promise.resolve()</code> to ensure that any
 returned promise runs to completion before the button
-is reenabled.</td>
+is re-enabled.</td>
         </tr>
     
     </tbody>
@@ -4081,7 +4069,7 @@ is reenabled.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2081">line 2081</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2083">line 2083</a>
         </div>
         
     </div>
@@ -4225,7 +4213,7 @@ extending this base class should overwrite the
             <td class="description last">Any return values of this function are discarded, but
 passed through <code>Promise.resolve()</code> to ensure that any
 returned promise runs to completion before the button
-is reenabled.</td>
+is re-enabled.</td>
         </tr>
     
     </tbody>
@@ -4247,7 +4235,7 @@ is reenabled.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1972">line 1972</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1974">line 1974</a>
         </div>
         
     </div>
@@ -4357,7 +4345,7 @@ the default implementation does nothing.</p>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2004">line 2004</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2006">line 2006</a>
         </div>
         
     </div>
@@ -4531,7 +4519,7 @@ to a <code>Node</code> value.</td>
         
 
         <footer>
-            Documentation generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Wed Jan 12 2022 11:47:05 GMT+0000 (Coordinated Universal Time)
+            Documentation generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> on Fri Mar 29 2024 06:58:11 GMT+0000 (Coordinated Universal Time)
         </footer>
     </div>
 </div>

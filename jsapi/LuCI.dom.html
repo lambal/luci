@@ -49,6 +49,8 @@
             
                 <li data-name="LuCI#env"><a href="LuCI.html#env">env</a></li>
             
+                <li data-name="LuCI#naturalCompare"><a href="LuCI.html#naturalCompare">naturalCompare</a></li>
+            
                 <li data-name="LuCI#Poll"><a href="LuCI.html#Poll">Poll</a></li>
             
                 <li data-name="LuCI#Request"><a href="LuCI.html#Request">Request</a></li>
@@ -105,6 +107,8 @@
                 <li data-name="LuCI#resource"><a href="LuCI.html#resource">resource</a></li>
             
                 <li data-name="LuCI#run"><a href="LuCI.html#run">run</a></li>
+            
+                <li data-name="LuCI#sortedArray"><a href="LuCI.html#sortedArray">sortedArray</a></li>
             
                 <li data-name="LuCI#sortedKeys"><a href="LuCI.html#sortedKeys">sortedKeys</a></li>
             
@@ -815,6 +819,10 @@
             
                 <li data-name="LuCI.form.FlagValue##enabled"><a href="LuCI.form.FlagValue.html#enabled">enabled</a></li>
             
+                <li data-name="LuCI.form.FlagValue##tooltip"><a href="LuCI.form.FlagValue.html#tooltip">tooltip</a></li>
+            
+                <li data-name="LuCI.form.FlagValue##tooltipicon"><a href="LuCI.form.FlagValue.html#tooltipicon">tooltipicon</a></li>
+            
                 <li data-name="LuCI.form.FlagValue#datatype"><a href="LuCI.form.FlagValue.html#datatype">datatype</a></li>
             
                 <li data-name="LuCI.form.FlagValue#default"><a href="LuCI.form.FlagValue.html#default">default</a></li>
@@ -930,10 +938,6 @@
                 <li data-name="LuCI.form.GridSection#sortable"><a href="LuCI.form.GridSection.html#sortable">sortable</a></li>
             
                 <li data-name="LuCI.form.GridSection#tabbed"><a href="LuCI.form.GridSection.html#tabbed">tabbed</a></li>
-            
-                <li data-name="LuCI.form.GridSection#tooltip"><a href="LuCI.form.GridSection.html#tooltip">tooltip</a></li>
-            
-                <li data-name="LuCI.form.GridSection#tooltipicon"><a href="LuCI.form.GridSection.html#tooltipicon">tooltipicon</a></li>
             
                 <li data-name="LuCI.form.GridSection#uciconfig"><a href="LuCI.form.GridSection.html#uciconfig">uciconfig</a></li>
             
@@ -1541,12 +1545,6 @@
             
             <span class="subtitle">Members</span>
             
-                <li data-name="LuCI.form.TableSection##addbtntitle"><a href="LuCI.form.TableSection.html#addbtntitle">addbtntitle</a></li>
-            
-                <li data-name="LuCI.form.TableSection##addremove"><a href="LuCI.form.TableSection.html#addremove">addremove</a></li>
-            
-                <li data-name="LuCI.form.TableSection##anonymous"><a href="LuCI.form.TableSection.html#anonymous">anonymous</a></li>
-            
                 <li data-name="LuCI.form.TableSection##extedit"><a href="LuCI.form.TableSection.html#extedit">extedit</a></li>
             
                 <li data-name="LuCI.form.TableSection##max_cols"><a href="LuCI.form.TableSection.html#max_cols">max_cols</a></li>
@@ -1561,8 +1559,6 @@
             
                 <li data-name="LuCI.form.TableSection##sortable"><a href="LuCI.form.TableSection.html#sortable">sortable</a></li>
             
-                <li data-name="LuCI.form.TableSection##uciconfig"><a href="LuCI.form.TableSection.html#uciconfig">uciconfig</a></li>
-            
                 <li data-name="LuCI.form.TableSection#addbtntitle"><a href="LuCI.form.TableSection.html#addbtntitle">addbtntitle</a></li>
             
                 <li data-name="LuCI.form.TableSection#addremove"><a href="LuCI.form.TableSection.html#addremove">addremove</a></li>
@@ -1572,10 +1568,6 @@
                 <li data-name="LuCI.form.TableSection#parentoption"><a href="LuCI.form.TableSection.html#parentoption">parentoption</a></li>
             
                 <li data-name="LuCI.form.TableSection#tabbed"><a href="LuCI.form.TableSection.html#tabbed">tabbed</a></li>
-            
-                <li data-name="LuCI.form.TableSection#tooltip"><a href="LuCI.form.TableSection.html#tooltip">tooltip</a></li>
-            
-                <li data-name="LuCI.form.TableSection#tooltipicon"><a href="LuCI.form.TableSection.html#tooltipicon">tooltipicon</a></li>
             
                 <li data-name="LuCI.form.TableSection#uciconfig"><a href="LuCI.form.TableSection.html#uciconfig">uciconfig</a></li>
             
@@ -1738,10 +1730,6 @@
                 <li data-name="LuCI.form.TypedSection##anonymous"><a href="LuCI.form.TypedSection.html#anonymous">anonymous</a></li>
             
                 <li data-name="LuCI.form.TypedSection##tabbed"><a href="LuCI.form.TypedSection.html#tabbed">tabbed</a></li>
-            
-                <li data-name="LuCI.form.TypedSection##tooltip"><a href="LuCI.form.TypedSection.html#tooltip">tooltip</a></li>
-            
-                <li data-name="LuCI.form.TypedSection##tooltipicon"><a href="LuCI.form.TypedSection.html#tooltipicon">tooltipicon</a></li>
             
                 <li data-name="LuCI.form.TypedSection##uciconfig"><a href="LuCI.form.TypedSection.html#uciconfig">uciconfig</a></li>
             
@@ -3557,7 +3545,7 @@ external JavaScript, use <code>L.require(&quot;dom&quot;).then(...)</code>.</p><
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1205">line 1205</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1207">line 1207</a>
         </div>
         
     </div>
@@ -3642,7 +3630,7 @@ external JavaScript, use <code>L.require(&quot;dom&quot;).then(...)</code>.</p><
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1359">line 1359</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1361">line 1361</a>
         </div>
         
     </div>
@@ -3735,7 +3723,7 @@ external JavaScript, use <code>L.require(&quot;dom&quot;).then(...)</code>.</p><
                         
                     
                 
-                <p>The childrens to append to the given node.</p>
+                <p>The children to append to the given node.</p>
 <p>When <code>children</code> is an array, then each item of the array
 will be either appended as child element or text node,
 depending on whether the item is a DOM <code>Node</code> instance or
@@ -3747,10 +3735,10 @@ the passed <code>node</code> argument as sole parameter and the <code>append</co
 function will be invoked again, with the given <code>node</code> argument
 as first and the return value of the <code>children</code> function as
 second parameter.</p>
-<p>When <code>children</code> is is a DOM <code>Node</code> instance, it will be
+<p>When <code>children</code> is a DOM <code>Node</code> instance, it will be
 appended to the given <code>node</code>.</p>
 <p>When <code>children</code> is any other non-<code>null</code> value, it will be
-converted to a string and appened to the <code>innerHTML</code> property
+converted to a string and appended to the <code>innerHTML</code> property
 of the given <code>node</code>.</p></td>
         </tr>
 	
@@ -3843,7 +3831,7 @@ if either the <code>node</code> argument was no valid DOM <code>node</code> or i
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1474">line 1474</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1476">line 1476</a>
         </div>
         
     </div>
@@ -3983,7 +3971,7 @@ added as attribute to the given <code>node</code>, using the given <code>key</co
 as attribute name.</p>
 <p>When <code>val</code> is of any other type, it will be added as attribute
 to the given <code>node</code> as-is, with the underlying <code>setAttribute()</code>
-call implicitely turning it into a string.</p></td>
+call implicitly turning it into a string.</p></td>
         </tr>
 	
 	
@@ -4041,7 +4029,7 @@ call implicitely turning it into a string.</p></td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1711">line 1711</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1713">line 1713</a>
         </div>
         
     </div>
@@ -4242,7 +4230,7 @@ a valid Class instance.</p>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1765">line 1765</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1767">line 1767</a>
         </div>
         
     </div>
@@ -4458,7 +4446,7 @@ instance didn't have the requested <code>method</code>.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1426">line 1426</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1428">line 1428</a>
         </div>
         
     </div>
@@ -4471,7 +4459,7 @@ instance didn't have the requested <code>method</code>.</td>
     <div class="description">
         <p>Replaces the content of the given node with the given children.</p>
 <p>This function first removes any children of the given DOM
-<code>Node</code> and then adds the given given children following the
+<code>Node</code> and then adds the given children following the
 rules outlined below.</p>
     </div>
     
@@ -4554,7 +4542,7 @@ rules outlined below.</p>
                         
                     
                 
-                <p>The childrens to replace into the given node.</p>
+                <p>The children to replace into the given node.</p>
 <p>When <code>children</code> is an array, then each item of the array
 will be either appended as child element or text node,
 depending on whether the item is a DOM <code>Node</code> instance or
@@ -4566,10 +4554,10 @@ the passed <code>node</code> argument as sole parameter and the <code>append</co
 function will be invoked again, with the given <code>node</code> argument
 as first and the return value of the <code>children</code> function as
 second parameter.</p>
-<p>When <code>children</code> is is a DOM <code>Node</code> instance, it will be
+<p>When <code>children</code> is a DOM <code>Node</code> instance, it will be
 appended to the given <code>node</code>.</p>
 <p>When <code>children</code> is any other non-<code>null</code> value, it will be
-converted to a string and appened to the <code>innerHTML</code> property
+converted to a string and appended to the <code>innerHTML</code> property
 of the given <code>node</code>.</p></td>
         </tr>
 	
@@ -4662,7 +4650,7 @@ if either the <code>node</code> argument was no valid DOM <code>node</code> or i
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1552">line 1552</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1554">line 1554</a>
         </div>
         
     </div>
@@ -4922,7 +4910,7 @@ element names, such as spaces.</p>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1628">line 1628</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1630">line 1630</a>
         </div>
         
     </div>
@@ -5161,7 +5149,7 @@ be found.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1231">line 1231</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1233">line 1233</a>
         </div>
         
     </div>
@@ -5306,7 +5294,7 @@ be found.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1731">line 1731</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1733">line 1733</a>
         </div>
         
     </div>
@@ -5456,7 +5444,7 @@ class could be found on the node itself or any of its parents.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1811">line 1811</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1813">line 1813</a>
         </div>
         
     </div>
@@ -5643,7 +5631,7 @@ result when testing it using the given <code>ignoreFn</code>.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1283">line 1283</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1285">line 1285</a>
         </div>
         
     </div>
@@ -5829,7 +5817,7 @@ selector didn't match.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1310">line 1310</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1312">line 1312</a>
         </div>
         
     </div>
@@ -6019,7 +6007,7 @@ selector didn't match any parent.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1250">line 1250</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1252">line 1252</a>
         </div>
         
     </div>
@@ -6174,7 +6162,7 @@ the first <code>div</code> element node.</p></td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1774">line 1774</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line1776">line 1776</a>
         </div>
         
     </div>
@@ -6328,7 +6316,7 @@ ignored, else not.</p>
         
 
         <footer>
-            Documentation generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Wed Jan 12 2022 11:47:04 GMT+0000 (Coordinated Universal Time)
+            Documentation generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> on Fri Mar 29 2024 06:58:10 GMT+0000 (Coordinated Universal Time)
         </footer>
     </div>
 </div>

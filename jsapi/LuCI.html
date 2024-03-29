@@ -49,6 +49,8 @@
             
                 <li data-name="LuCI#env"><a href="LuCI.html#env">env</a></li>
             
+                <li data-name="LuCI#naturalCompare"><a href="LuCI.html#naturalCompare">naturalCompare</a></li>
+            
                 <li data-name="LuCI#Poll"><a href="LuCI.html#Poll">Poll</a></li>
             
                 <li data-name="LuCI#Request"><a href="LuCI.html#Request">Request</a></li>
@@ -105,6 +107,8 @@
                 <li data-name="LuCI#resource"><a href="LuCI.html#resource">resource</a></li>
             
                 <li data-name="LuCI#run"><a href="LuCI.html#run">run</a></li>
+            
+                <li data-name="LuCI#sortedArray"><a href="LuCI.html#sortedArray">sortedArray</a></li>
             
                 <li data-name="LuCI#sortedKeys"><a href="LuCI.html#sortedKeys">sortedKeys</a></li>
             
@@ -815,6 +819,10 @@
             
                 <li data-name="LuCI.form.FlagValue##enabled"><a href="LuCI.form.FlagValue.html#enabled">enabled</a></li>
             
+                <li data-name="LuCI.form.FlagValue##tooltip"><a href="LuCI.form.FlagValue.html#tooltip">tooltip</a></li>
+            
+                <li data-name="LuCI.form.FlagValue##tooltipicon"><a href="LuCI.form.FlagValue.html#tooltipicon">tooltipicon</a></li>
+            
                 <li data-name="LuCI.form.FlagValue#datatype"><a href="LuCI.form.FlagValue.html#datatype">datatype</a></li>
             
                 <li data-name="LuCI.form.FlagValue#default"><a href="LuCI.form.FlagValue.html#default">default</a></li>
@@ -930,10 +938,6 @@
                 <li data-name="LuCI.form.GridSection#sortable"><a href="LuCI.form.GridSection.html#sortable">sortable</a></li>
             
                 <li data-name="LuCI.form.GridSection#tabbed"><a href="LuCI.form.GridSection.html#tabbed">tabbed</a></li>
-            
-                <li data-name="LuCI.form.GridSection#tooltip"><a href="LuCI.form.GridSection.html#tooltip">tooltip</a></li>
-            
-                <li data-name="LuCI.form.GridSection#tooltipicon"><a href="LuCI.form.GridSection.html#tooltipicon">tooltipicon</a></li>
             
                 <li data-name="LuCI.form.GridSection#uciconfig"><a href="LuCI.form.GridSection.html#uciconfig">uciconfig</a></li>
             
@@ -1541,12 +1545,6 @@
             
             <span class="subtitle">Members</span>
             
-                <li data-name="LuCI.form.TableSection##addbtntitle"><a href="LuCI.form.TableSection.html#addbtntitle">addbtntitle</a></li>
-            
-                <li data-name="LuCI.form.TableSection##addremove"><a href="LuCI.form.TableSection.html#addremove">addremove</a></li>
-            
-                <li data-name="LuCI.form.TableSection##anonymous"><a href="LuCI.form.TableSection.html#anonymous">anonymous</a></li>
-            
                 <li data-name="LuCI.form.TableSection##extedit"><a href="LuCI.form.TableSection.html#extedit">extedit</a></li>
             
                 <li data-name="LuCI.form.TableSection##max_cols"><a href="LuCI.form.TableSection.html#max_cols">max_cols</a></li>
@@ -1561,8 +1559,6 @@
             
                 <li data-name="LuCI.form.TableSection##sortable"><a href="LuCI.form.TableSection.html#sortable">sortable</a></li>
             
-                <li data-name="LuCI.form.TableSection##uciconfig"><a href="LuCI.form.TableSection.html#uciconfig">uciconfig</a></li>
-            
                 <li data-name="LuCI.form.TableSection#addbtntitle"><a href="LuCI.form.TableSection.html#addbtntitle">addbtntitle</a></li>
             
                 <li data-name="LuCI.form.TableSection#addremove"><a href="LuCI.form.TableSection.html#addremove">addremove</a></li>
@@ -1572,10 +1568,6 @@
                 <li data-name="LuCI.form.TableSection#parentoption"><a href="LuCI.form.TableSection.html#parentoption">parentoption</a></li>
             
                 <li data-name="LuCI.form.TableSection#tabbed"><a href="LuCI.form.TableSection.html#tabbed">tabbed</a></li>
-            
-                <li data-name="LuCI.form.TableSection#tooltip"><a href="LuCI.form.TableSection.html#tooltip">tooltip</a></li>
-            
-                <li data-name="LuCI.form.TableSection#tooltipicon"><a href="LuCI.form.TableSection.html#tooltipicon">tooltipicon</a></li>
             
                 <li data-name="LuCI.form.TableSection#uciconfig"><a href="LuCI.form.TableSection.html#uciconfig">uciconfig</a></li>
             
@@ -1738,10 +1730,6 @@
                 <li data-name="LuCI.form.TypedSection##anonymous"><a href="LuCI.form.TypedSection.html#anonymous">anonymous</a></li>
             
                 <li data-name="LuCI.form.TypedSection##tabbed"><a href="LuCI.form.TypedSection.html#tabbed">tabbed</a></li>
-            
-                <li data-name="LuCI.form.TypedSection##tooltip"><a href="LuCI.form.TypedSection.html#tooltip">tooltip</a></li>
-            
-                <li data-name="LuCI.form.TypedSection##tooltipicon"><a href="LuCI.form.TypedSection.html#tooltipicon">tooltipicon</a></li>
             
                 <li data-name="LuCI.form.TypedSection##uciconfig"><a href="LuCI.form.TypedSection.html#uciconfig">uciconfig</a></li>
             
@@ -3865,6 +3853,55 @@ as request timeouts, base URLs etc.</p>
             
 <dt>
     <div class="nameContainer">
+        <h4 class="name" id="naturalCompare">naturalCompare<span class="type-signature type function">function</span> </h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Compares two values numerically and returns -1, 0 or 1 depending
+on whether the first value is smaller, equal to or larger than the
+second one respectively.</p>
+<p>This function is meant to be used as comparator function for
+Array.sort().</p>
+    </div>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
         <h4 class="name" id="Poll">Poll</h4>
     </div>
     
@@ -4022,7 +4059,7 @@ to request the <code>LuCI.view</code> class.</p>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2389">line 2389</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2393">line 2393</a>
         </div>
         
     </div>
@@ -4234,7 +4271,7 @@ as parameters.</p></td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2348">line 2348</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2352">line 2352</a>
         </div>
         
     </div>
@@ -4246,7 +4283,7 @@ as parameters.</p></td>
     
     <div class="description">
         <p>A wrapper around <a href="LuCI.html#raise"><code>raise()</code></a> which also renders
-the error either as modal overlay when <code>ui.js</code> is already loaed
+the error either as modal overlay when <code>ui.js</code> is already loaded
 or directly into the view body.</p>
     </div>
     
@@ -4473,7 +4510,7 @@ argument or copied from the given error instance.</p>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2769">line 2769</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2773">line 2773</a>
         </div>
         
     </div>
@@ -4628,7 +4665,7 @@ document root.</p>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3073">line 3073</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3114">line 3114</a>
         </div>
         
     </div>
@@ -4840,7 +4877,7 @@ callback function. The function is a wrapper around
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3211">line 3211</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3252">line 3252</a>
         </div>
         
     </div>
@@ -4943,7 +4980,7 @@ when it didn't run to begin with.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2647">line 2647</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2651">line 2651</a>
         </div>
         
     </div>
@@ -5136,7 +5173,7 @@ has no sub-features.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3177">line 3177</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3218">line 3218</a>
         </div>
         
     </div>
@@ -5242,7 +5279,7 @@ group is granted with write permissions.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2915">line 2915</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2919">line 2919</a>
         </div>
         
     </div>
@@ -5397,7 +5434,7 @@ not <code>null</code>, else returns <code>false</code>.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2895">line 2895</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2899">line 2899</a>
         </div>
         
     </div>
@@ -5497,7 +5534,7 @@ not <code>null</code>, else returns <code>false</code>.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2882">line 2882</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2886">line 2886</a>
         </div>
         
     </div>
@@ -5508,7 +5545,7 @@ not <code>null</code>, else returns <code>false</code>.</td>
     
     
     <div class="description">
-        <p>Construct an URL path relative to the media resource path of the
+        <p>Construct a URL path relative to the media resource path of the
 LuCI ui (usually <code>/luci-static/$theme_name</code>).</p>
 <p>The resulting URL is guaranteed to only contain the characters
 <code>a-z</code>, <code>A-Z</code>, <code>0-9</code>, <code>_</code>, <code>.</code>, <code>%</code>, <code>,</code>, <code>;</code>, and <code>-</code> as well
@@ -5566,7 +5603,7 @@ as <code>/</code> for the path separator.</p>
                         
                     
                 
-                <p>An array of parts to join into an URL path. Parts may contain
+                <p>An array of parts to join into a URL path. Parts may contain
 slashes and any of the other characters mentioned above.</p></td>
         </tr>
 	
@@ -5654,7 +5691,7 @@ slashes and any of the other characters mentioned above.</p></td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2807">line 2807</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2811">line 2811</a>
         </div>
         
     </div>
@@ -5753,7 +5790,7 @@ omitted, it defaults to an empty string.</p></td>
                         
                     
                 
-                <p>An array of parts to join into an URL path. Parts may contain
+                <p>An array of parts to join into a URL path. Parts may contain
 slashes and any of the other characters mentioned above.</p></td>
         </tr>
 	
@@ -5841,7 +5878,7 @@ slashes and any of the other characters mentioned above.</p></td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3143">line 3143</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3184">line 3184</a>
         </div>
         
     </div>
@@ -6146,7 +6183,7 @@ polling request.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3101">line 3101</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3142">line 3142</a>
         </div>
         
     </div>
@@ -6361,7 +6398,7 @@ by default.</p>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2282">line 2282</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2286">line 2286</a>
         </div>
         
     </div>
@@ -6600,7 +6637,7 @@ argument or copied from the given error instance.</p>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2428">line 2428</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2432">line 2432</a>
         </div>
         
     </div>
@@ -6858,7 +6895,7 @@ class instance.</p>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3028">line 3028</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3069">line 3069</a>
         </div>
         
     </div>
@@ -6869,7 +6906,7 @@ class instance.</p>
     
     
     <div class="description">
-        <p>Returns a promise resolving with either the given value or or with
+        <p>Returns a promise resolving with either the given value or with
 the given default in case the input value is a rejecting promise.</p>
     </div>
     
@@ -7029,7 +7066,7 @@ to the given default value on error.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2860">line 2860</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2864">line 2864</a>
         </div>
         
     </div>
@@ -7040,7 +7077,7 @@ to the given default value on error.</td>
     
     
     <div class="description">
-        <p>Construct an URL path relative to the global static resource path
+        <p>Construct a URL path relative to the global static resource path
 of the LuCI ui (usually <code>/luci-static/resources</code>).</p>
 <p>The resulting URL is guaranteed to only contain the characters
 <code>a-z</code>, <code>A-Z</code>, <code>0-9</code>, <code>_</code>, <code>.</code>, <code>%</code>, <code>,</code>, <code>;</code>, and <code>-</code> as well
@@ -7098,7 +7135,7 @@ as <code>/</code> for the path separator.</p>
                         
                     
                 
-                <p>An array of parts to join into an URL path. Parts may contain
+                <p>An array of parts to join into a URL path. Parts may contain
 slashes and any of the other characters mentioned above.</p></td>
         </tr>
 	
@@ -7186,7 +7223,7 @@ slashes and any of the other characters mentioned above.</p></td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3224">line 3224</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3265">line 3265</a>
         </div>
         
     </div>
@@ -7282,6 +7319,163 @@ when it was already running.</td>
             
 <dt>
     <div class="nameContainer">
+        <h4 class="name" id="sortedArray">
+            
+            sortedArray<span class="signature">(val)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Array.&lt;*>}</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3014">line 3014</a>
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Converts the given value to an array using toArray() if needed,
+performs a numerical sort using naturalCompare() and returns the
+result. If the input already is an array, no copy is being made
+and the sorting is performed in-place.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>val</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>The input value to sort (and convert to an array if needed).</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li>toArray</li>
+        
+            <li>naturalCompare</li>
+        </ul>
+    </dd>
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                        Array.&lt;*>
+                        
+                    
+            </td>
+            <td class="description last">Returns the resulting, numerically sorted array.</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
         <h4 class="name" id="sortedKeys">
             
             sortedKeys<span class="signature">(obj, <span class="optional">key</span>, <span class="optional">sortmode</span>)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Array.&lt;string>}</span>
@@ -7289,7 +7483,7 @@ when it was already running.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2944">line 2944</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2948">line 2948</a>
         </div>
         
     </div>
@@ -7368,6 +7562,9 @@ not an object, the function will return an empty array.</p></td>
             
                 
 <span class="param-type">string</span>
+|
+
+<span class="param-type">null</span>
 
 
             
@@ -7400,7 +7597,10 @@ some other key pointing to a value within the nested values.</p></td>
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">"addr"</span>
+|
+
+<span class="param-type">"num"</span>
 
 
             
@@ -7417,7 +7617,7 @@ some other key pointing to a value within the nested values.</p></td>
                         
                     
                 
-                <p>May be either <code>addr</code> or <code>num</code> to override the natural
+                <p>Can be either <code>addr</code> or <code>num</code> to override the natural
 lexicographic sorting with a sorting suitable for IP/MAC style
 addresses or numeric values respectively.</p></td>
         </tr>
@@ -7506,7 +7706,7 @@ addresses or numeric values respectively.</p></td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3198">line 3198</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3239">line 3239</a>
         </div>
         
     </div>
@@ -7654,7 +7854,7 @@ it could not be found.</td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2994">line 2994</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3035">line 3035</a>
         </div>
         
     </div>
@@ -7804,7 +8004,7 @@ space and returned as array.</p>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2838">line 2838</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line2842">line 2842</a>
         </div>
         
     </div>
@@ -7815,7 +8015,7 @@ space and returned as array.</p>
     
     
     <div class="description">
-        <p>Construct an URL  pathrelative to the script path of the server
+        <p>Construct a URL with path relative to the script path of the server
 side LuCI application (usually <code>/cgi-bin/luci</code>).</p>
 <p>The resulting URL is guaranteed to only contain the characters
 <code>a-z</code>, <code>A-Z</code>, <code>0-9</code>, <code>_</code>, <code>.</code>, <code>%</code>, <code>,</code>, <code>;</code>, and <code>-</code> as well
@@ -7873,7 +8073,7 @@ as <code>/</code> for the path separator.</p>
                         
                     
                 
-                <p>An array of parts to join into an URL path. Parts may contain
+                <p>An array of parts to join into a URL path. Parts may contain
 slashes and any of the other characters mentioned above.</p></td>
         </tr>
 	
@@ -7967,7 +8167,7 @@ slashes and any of the other characters mentioned above.</p></td>
     
         
         <div class="tag-source">
-            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3032">line 3032</a>
+            <a href="luci.js.html">luci.js</a>, <a href="luci.js.html#line3073">line 3073</a>
         </div>
         
     </div>
@@ -8138,7 +8338,7 @@ else <code>null</code>.</p></td>
         
 
         <footer>
-            Documentation generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Wed Jan 12 2022 11:47:04 GMT+0000 (Coordinated Universal Time)
+            Documentation generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> on Fri Mar 29 2024 06:58:10 GMT+0000 (Coordinated Universal Time)
         </footer>
     </div>
 </div>

@@ -49,6 +49,8 @@
             
                 <li data-name="LuCI#env"><a href="LuCI.html#env">env</a></li>
             
+                <li data-name="LuCI#naturalCompare"><a href="LuCI.html#naturalCompare">naturalCompare</a></li>
+            
                 <li data-name="LuCI#Poll"><a href="LuCI.html#Poll">Poll</a></li>
             
                 <li data-name="LuCI#Request"><a href="LuCI.html#Request">Request</a></li>
@@ -105,6 +107,8 @@
                 <li data-name="LuCI#resource"><a href="LuCI.html#resource">resource</a></li>
             
                 <li data-name="LuCI#run"><a href="LuCI.html#run">run</a></li>
+            
+                <li data-name="LuCI#sortedArray"><a href="LuCI.html#sortedArray">sortedArray</a></li>
             
                 <li data-name="LuCI#sortedKeys"><a href="LuCI.html#sortedKeys">sortedKeys</a></li>
             
@@ -815,6 +819,10 @@
             
                 <li data-name="LuCI.form.FlagValue##enabled"><a href="LuCI.form.FlagValue.html#enabled">enabled</a></li>
             
+                <li data-name="LuCI.form.FlagValue##tooltip"><a href="LuCI.form.FlagValue.html#tooltip">tooltip</a></li>
+            
+                <li data-name="LuCI.form.FlagValue##tooltipicon"><a href="LuCI.form.FlagValue.html#tooltipicon">tooltipicon</a></li>
+            
                 <li data-name="LuCI.form.FlagValue#datatype"><a href="LuCI.form.FlagValue.html#datatype">datatype</a></li>
             
                 <li data-name="LuCI.form.FlagValue#default"><a href="LuCI.form.FlagValue.html#default">default</a></li>
@@ -930,10 +938,6 @@
                 <li data-name="LuCI.form.GridSection#sortable"><a href="LuCI.form.GridSection.html#sortable">sortable</a></li>
             
                 <li data-name="LuCI.form.GridSection#tabbed"><a href="LuCI.form.GridSection.html#tabbed">tabbed</a></li>
-            
-                <li data-name="LuCI.form.GridSection#tooltip"><a href="LuCI.form.GridSection.html#tooltip">tooltip</a></li>
-            
-                <li data-name="LuCI.form.GridSection#tooltipicon"><a href="LuCI.form.GridSection.html#tooltipicon">tooltipicon</a></li>
             
                 <li data-name="LuCI.form.GridSection#uciconfig"><a href="LuCI.form.GridSection.html#uciconfig">uciconfig</a></li>
             
@@ -1541,12 +1545,6 @@
             
             <span class="subtitle">Members</span>
             
-                <li data-name="LuCI.form.TableSection##addbtntitle"><a href="LuCI.form.TableSection.html#addbtntitle">addbtntitle</a></li>
-            
-                <li data-name="LuCI.form.TableSection##addremove"><a href="LuCI.form.TableSection.html#addremove">addremove</a></li>
-            
-                <li data-name="LuCI.form.TableSection##anonymous"><a href="LuCI.form.TableSection.html#anonymous">anonymous</a></li>
-            
                 <li data-name="LuCI.form.TableSection##extedit"><a href="LuCI.form.TableSection.html#extedit">extedit</a></li>
             
                 <li data-name="LuCI.form.TableSection##max_cols"><a href="LuCI.form.TableSection.html#max_cols">max_cols</a></li>
@@ -1561,8 +1559,6 @@
             
                 <li data-name="LuCI.form.TableSection##sortable"><a href="LuCI.form.TableSection.html#sortable">sortable</a></li>
             
-                <li data-name="LuCI.form.TableSection##uciconfig"><a href="LuCI.form.TableSection.html#uciconfig">uciconfig</a></li>
-            
                 <li data-name="LuCI.form.TableSection#addbtntitle"><a href="LuCI.form.TableSection.html#addbtntitle">addbtntitle</a></li>
             
                 <li data-name="LuCI.form.TableSection#addremove"><a href="LuCI.form.TableSection.html#addremove">addremove</a></li>
@@ -1572,10 +1568,6 @@
                 <li data-name="LuCI.form.TableSection#parentoption"><a href="LuCI.form.TableSection.html#parentoption">parentoption</a></li>
             
                 <li data-name="LuCI.form.TableSection#tabbed"><a href="LuCI.form.TableSection.html#tabbed">tabbed</a></li>
-            
-                <li data-name="LuCI.form.TableSection#tooltip"><a href="LuCI.form.TableSection.html#tooltip">tooltip</a></li>
-            
-                <li data-name="LuCI.form.TableSection#tooltipicon"><a href="LuCI.form.TableSection.html#tooltipicon">tooltipicon</a></li>
             
                 <li data-name="LuCI.form.TableSection#uciconfig"><a href="LuCI.form.TableSection.html#uciconfig">uciconfig</a></li>
             
@@ -1738,10 +1730,6 @@
                 <li data-name="LuCI.form.TypedSection##anonymous"><a href="LuCI.form.TypedSection.html#anonymous">anonymous</a></li>
             
                 <li data-name="LuCI.form.TypedSection##tabbed"><a href="LuCI.form.TypedSection.html#tabbed">tabbed</a></li>
-            
-                <li data-name="LuCI.form.TypedSection##tooltip"><a href="LuCI.form.TypedSection.html#tooltip">tooltip</a></li>
-            
-                <li data-name="LuCI.form.TypedSection##tooltipicon"><a href="LuCI.form.TypedSection.html#tooltipicon">tooltipicon</a></li>
             
                 <li data-name="LuCI.form.TypedSection##uciconfig"><a href="LuCI.form.TypedSection.html#uciconfig">uciconfig</a></li>
             
@@ -3555,7 +3543,7 @@ element container, allowing to nest form sections into other sections.</p></div>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line4552">line 4552</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line4628">line 4628</a>
         </div>
         
     </div>
@@ -4335,7 +4323,7 @@ with.</p>
     
     <div class="description">
         <p>If set to <code>true</code>, the underlying ui input widget value is not cleared
-from the configuration on unsatisfied depedencies. The default behavior
+from the configuration on unsatisfied dependencies. The default behavior
 is to remove the values of all options whose dependencies are not
 fulfilled.</p>
     </div>
@@ -4698,7 +4686,7 @@ table section elements.</p>
             
                 <span class="inherited"><a href="LuCI.form.AbstractElement.html#append">inherited</a></span>
             
-            append<span class="signature">(element)</span>
+            append<span class="signature">(obj)</span>
         </h4>
     
         
@@ -4745,7 +4733,7 @@ table section elements.</p>
 	
         <tr>
             
-                <td class="name"><code>element</code></td>
+                <td class="name"><code>obj</code></td>
             
             
             <td class="type">
@@ -4821,7 +4809,7 @@ table section elements.</p>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1746">line 1746</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1750">line 1750</a>
         </div>
         
     </div>
@@ -4999,7 +4987,7 @@ within the given specific section.</p>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line4664">line 4664</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line4740">line 4740</a>
         </div>
         
     </div>
@@ -5169,12 +5157,12 @@ its <code>cfgvalue()</code> implementation will always return <code>null</code>.
             
                 <span class="inherited"><a href="LuCI.form.AbstractValue.html#depends">inherited</a></span>
             
-            depends<span class="signature">(optionname_or_depends, optionvalue|RegExp)</span>
+            depends<span class="signature">(field, value)</span>
         </h4>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1628">line 1628</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1632">line 1632</a>
         </div>
         
     </div>
@@ -5185,9 +5173,9 @@ its <code>cfgvalue()</code> implementation will always return <code>null</code>.
     
     
     <div class="description">
-        <p>Add a dependency contraint to the option.</p>
+        <p>Add a dependency constraint to the option.</p>
 <p>Dependency constraints allow making the presence of option elements
-dependant on the current values of certain other options within the
+dependent on the current values of certain other options within the
 same form. An option element with unsatisfied dependencies will be
 hidden from the view and its current value is omitted when saving.</p>
 <p>Multiple constraints (that is, multiple calls to <code>depends()</code>) are
@@ -5196,7 +5184,7 @@ treated as alternatives, forming a logical &quot;or&quot; expression.</p>
 possible to depend on multiple options simultaneously, allowing to form
 a logical &quot;and&quot; expression.</p>
 <p>Option names may be given in &quot;dot notation&quot; which allows to reference
-option elements outside of the current form section. If a name without
+option elements outside the current form section. If a name without
 dot is specified, it refers to an option within the same configuration
 section. If specified as <code>configname.sectionid.optionname</code>,
 options anywhere within the same form may be specified.</p>
@@ -5287,7 +5275,7 @@ is ignored. The recognized tags are:</p>
 	
         <tr>
             
-                <td class="name"><code>optionname_or_depends</code></td>
+                <td class="name"><code>field</code></td>
             
             
             <td class="type">
@@ -5307,20 +5295,23 @@ is ignored. The recognized tags are:</p>
             <td class="description last">
                 
                 <p>The name of the option to depend on or an object describing multiple
-dependencies which must be satified (a logical &quot;and&quot; expression).</p></td>
+dependencies which must be satisfied (a logical &quot;and&quot; expression).</p></td>
         </tr>
 	
 	
 	
         <tr>
             
-                <td class="name"><code>optionvalue|RegExp</code></td>
+                <td class="name"><code>value</code></td>
             
             
             <td class="type">
             
                 
 <span class="param-type">string</span>
+|
+
+<span class="param-type">RegExp</span>
 
 
             
@@ -5392,7 +5383,7 @@ argument, this parameter is ignored.</p></td>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line4673">line 4673</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line4749">line 4749</a>
         </div>
         
     </div>
@@ -5567,7 +5558,7 @@ its <code>formvalue()</code> implementation will always return <code>null</code>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1797">line 1797</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1801">line 1801</a>
         </div>
         
     </div>
@@ -5745,7 +5736,7 @@ option implementation does not use <code>LuCI.ui</code> widgets.</td>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1935">line 1935</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1939">line 1939</a>
         </div>
         
     </div>
@@ -5892,7 +5883,7 @@ option implementation does not use <code>LuCI.ui</code> widgets.</td>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1953">line 1953</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1957">line 1957</a>
         </div>
         
     </div>
@@ -6042,7 +6033,7 @@ returns <code>false</code>.</td>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1921">line 1921</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1925">line 1925</a>
         </div>
         
     </div>
@@ -6190,7 +6181,7 @@ returns <code>false</code>.</td>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line4613">line 4613</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line4689">line 4689</a>
         </div>
         
     </div>
@@ -6373,7 +6364,7 @@ so it may return promises if overridden by user code.</td>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line4618">line 4618</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line4694">line 4694</a>
         </div>
         
     </div>
@@ -6524,7 +6515,7 @@ validation constraints.</td>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line4655">line 4655</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line4731">line 4731</a>
         </div>
         
     </div>
@@ -6638,7 +6629,7 @@ its <code>remove()</code> implementation is a no-op.</p>
             
                 <span class="inherited"><a href="LuCI.form.AbstractElement.html#stripTags">inherited</a></span>
             
-            stripTags<span class="signature">(input)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{string}</span>
+            stripTags<span class="signature">(s)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{string}</span>
         </h4>
     
         
@@ -6685,7 +6676,7 @@ its <code>remove()</code> implementation is a no-op.</p>
 	
         <tr>
             
-                <td class="name"><code>input</code></td>
+                <td class="name"><code>s</code></td>
             
             
             <td class="type">
@@ -6766,7 +6757,7 @@ its <code>remove()</code> implementation is a no-op.</p>
                         
                     
             </td>
-            <td class="description last">The cleaned input string with HTML removes removed.</td>
+            <td class="description last">The cleaned input string with HTML tags removed.</td>
         </tr>
     
     </tbody>
@@ -6790,7 +6781,7 @@ its <code>remove()</code> implementation is a no-op.</p>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1872">line 1872</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1876">line 1876</a>
         </div>
         
     </div>
@@ -6970,7 +6961,7 @@ state of checkbox elements.</p>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line321">line 321</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line325">line 325</a>
         </div>
         
     </div>
@@ -7160,12 +7151,12 @@ was neither a string nor a function.</td>
             
                 <span class="inherited"><a href="LuCI.form.SectionValue.html#value">inherited</a></span>
             
-            value<span class="signature">(key, value)</span>
+            value<span class="signature">(key, val)</span>
         </h4>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line4639">line 4639</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line4715">line 4715</a>
         </div>
         
     </div>
@@ -7231,7 +7222,7 @@ its <code>value()</code> implementation is a no-op.</p>
 	
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>val</code></td>
             
             
             <td class="type">
@@ -7311,7 +7302,7 @@ or a plain text string. If omitted, the <code>key</code> value is used as captio
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line4647">line 4647</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line4723">line 4723</a>
         </div>
         
     </div>
@@ -7462,7 +7453,7 @@ its <code>write()</code> implementation is a no-op.</p>
         
 
         <footer>
-            Documentation generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Wed Jan 12 2022 11:47:05 GMT+0000 (Coordinated Universal Time)
+            Documentation generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> on Fri Mar 29 2024 06:58:11 GMT+0000 (Coordinated Universal Time)
         </footer>
     </div>
 </div>

@@ -49,6 +49,8 @@
             
                 <li data-name="LuCI#env"><a href="LuCI.html#env">env</a></li>
             
+                <li data-name="LuCI#naturalCompare"><a href="LuCI.html#naturalCompare">naturalCompare</a></li>
+            
                 <li data-name="LuCI#Poll"><a href="LuCI.html#Poll">Poll</a></li>
             
                 <li data-name="LuCI#Request"><a href="LuCI.html#Request">Request</a></li>
@@ -105,6 +107,8 @@
                 <li data-name="LuCI#resource"><a href="LuCI.html#resource">resource</a></li>
             
                 <li data-name="LuCI#run"><a href="LuCI.html#run">run</a></li>
+            
+                <li data-name="LuCI#sortedArray"><a href="LuCI.html#sortedArray">sortedArray</a></li>
             
                 <li data-name="LuCI#sortedKeys"><a href="LuCI.html#sortedKeys">sortedKeys</a></li>
             
@@ -815,6 +819,10 @@
             
                 <li data-name="LuCI.form.FlagValue##enabled"><a href="LuCI.form.FlagValue.html#enabled">enabled</a></li>
             
+                <li data-name="LuCI.form.FlagValue##tooltip"><a href="LuCI.form.FlagValue.html#tooltip">tooltip</a></li>
+            
+                <li data-name="LuCI.form.FlagValue##tooltipicon"><a href="LuCI.form.FlagValue.html#tooltipicon">tooltipicon</a></li>
+            
                 <li data-name="LuCI.form.FlagValue#datatype"><a href="LuCI.form.FlagValue.html#datatype">datatype</a></li>
             
                 <li data-name="LuCI.form.FlagValue#default"><a href="LuCI.form.FlagValue.html#default">default</a></li>
@@ -930,10 +938,6 @@
                 <li data-name="LuCI.form.GridSection#sortable"><a href="LuCI.form.GridSection.html#sortable">sortable</a></li>
             
                 <li data-name="LuCI.form.GridSection#tabbed"><a href="LuCI.form.GridSection.html#tabbed">tabbed</a></li>
-            
-                <li data-name="LuCI.form.GridSection#tooltip"><a href="LuCI.form.GridSection.html#tooltip">tooltip</a></li>
-            
-                <li data-name="LuCI.form.GridSection#tooltipicon"><a href="LuCI.form.GridSection.html#tooltipicon">tooltipicon</a></li>
             
                 <li data-name="LuCI.form.GridSection#uciconfig"><a href="LuCI.form.GridSection.html#uciconfig">uciconfig</a></li>
             
@@ -1541,12 +1545,6 @@
             
             <span class="subtitle">Members</span>
             
-                <li data-name="LuCI.form.TableSection##addbtntitle"><a href="LuCI.form.TableSection.html#addbtntitle">addbtntitle</a></li>
-            
-                <li data-name="LuCI.form.TableSection##addremove"><a href="LuCI.form.TableSection.html#addremove">addremove</a></li>
-            
-                <li data-name="LuCI.form.TableSection##anonymous"><a href="LuCI.form.TableSection.html#anonymous">anonymous</a></li>
-            
                 <li data-name="LuCI.form.TableSection##extedit"><a href="LuCI.form.TableSection.html#extedit">extedit</a></li>
             
                 <li data-name="LuCI.form.TableSection##max_cols"><a href="LuCI.form.TableSection.html#max_cols">max_cols</a></li>
@@ -1561,8 +1559,6 @@
             
                 <li data-name="LuCI.form.TableSection##sortable"><a href="LuCI.form.TableSection.html#sortable">sortable</a></li>
             
-                <li data-name="LuCI.form.TableSection##uciconfig"><a href="LuCI.form.TableSection.html#uciconfig">uciconfig</a></li>
-            
                 <li data-name="LuCI.form.TableSection#addbtntitle"><a href="LuCI.form.TableSection.html#addbtntitle">addbtntitle</a></li>
             
                 <li data-name="LuCI.form.TableSection#addremove"><a href="LuCI.form.TableSection.html#addremove">addremove</a></li>
@@ -1572,10 +1568,6 @@
                 <li data-name="LuCI.form.TableSection#parentoption"><a href="LuCI.form.TableSection.html#parentoption">parentoption</a></li>
             
                 <li data-name="LuCI.form.TableSection#tabbed"><a href="LuCI.form.TableSection.html#tabbed">tabbed</a></li>
-            
-                <li data-name="LuCI.form.TableSection#tooltip"><a href="LuCI.form.TableSection.html#tooltip">tooltip</a></li>
-            
-                <li data-name="LuCI.form.TableSection#tooltipicon"><a href="LuCI.form.TableSection.html#tooltipicon">tooltipicon</a></li>
             
                 <li data-name="LuCI.form.TableSection#uciconfig"><a href="LuCI.form.TableSection.html#uciconfig">uciconfig</a></li>
             
@@ -1738,10 +1730,6 @@
                 <li data-name="LuCI.form.TypedSection##anonymous"><a href="LuCI.form.TypedSection.html#anonymous">anonymous</a></li>
             
                 <li data-name="LuCI.form.TypedSection##tabbed"><a href="LuCI.form.TypedSection.html#tabbed">tabbed</a></li>
-            
-                <li data-name="LuCI.form.TypedSection##tooltip"><a href="LuCI.form.TypedSection.html#tooltip">tooltip</a></li>
-            
-                <li data-name="LuCI.form.TypedSection##tooltipicon"><a href="LuCI.form.TypedSection.html#tooltipicon">tooltipicon</a></li>
             
                 <li data-name="LuCI.form.TypedSection##uciconfig"><a href="LuCI.form.TypedSection.html#uciconfig">uciconfig</a></li>
             
@@ -3558,7 +3546,7 @@ form options and for handling tabs to segment child options.</p>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line809">line 809</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line813">line 813</a>
         </div>
         
     </div>
@@ -3698,7 +3686,7 @@ this property will hold a reference to the parent option instance.</p>
             
                 <span class="inherited"><a href="LuCI.form.AbstractElement.html#append">inherited</a></span>
             
-            append<span class="signature">(element)</span>
+            append<span class="signature">(obj)</span>
         </h4>
     
         
@@ -3745,7 +3733,7 @@ this property will hold a reference to the parent option instance.</p>
 	
         <tr>
             
-                <td class="name"><code>element</code></td>
+                <td class="name"><code>obj</code></td>
             
             
             <td class="type">
@@ -3819,7 +3807,7 @@ this property will hold a reference to the parent option instance.</p>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line860">line 860</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line864">line 864</a>
         </div>
         
     </div>
@@ -3947,7 +3935,7 @@ The sections will be rendered in the same order as the returned array.</td>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1079">line 1079</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1083">line 1083</a>
         </div>
         
     </div>
@@ -4143,7 +4131,7 @@ on the amount of passed arguments.</td>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line883">line 883</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line887">line 887</a>
         </div>
         
     </div>
@@ -4295,7 +4283,7 @@ custom implementations.</p>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1112">line 1112</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1116">line 1116</a>
         </div>
         
     </div>
@@ -4491,7 +4479,7 @@ on the amount of passed arguments.</td>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1178">line 1178</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1182">line 1182</a>
         </div>
         
     </div>
@@ -4656,7 +4644,7 @@ depending on the amount of passed arguments.</td>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1148">line 1148</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1152">line 1152</a>
         </div>
         
     </div>
@@ -4849,7 +4837,7 @@ on the amount of passed arguments.</td>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line898">line 898</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line902">line 902</a>
         </div>
         
     </div>
@@ -4953,7 +4941,7 @@ elements load functions rejected with an error.</td>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1011">line 1011</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1015">line 1015</a>
         </div>
         
     </div>
@@ -5020,7 +5008,7 @@ should be used instead if this form section element uses tabs.</p>
                 
                 <p>The option class to use for rendering the configuration option. Note
 that this value must be the class itself, not a class instance obtained
-from calling <code>new</code>. It must also be a class dervied from
+from calling <code>new</code>. It must also be a class derived from
 <a href="LuCI.form.AbstractSection.html"><code>LuCI.form.AbstractSection</code></a>.</p></td>
         </tr>
 	
@@ -5051,7 +5039,7 @@ from calling <code>new</code>. It must also be a class dervied from
                         <span class="repeatable">repeatable</span>
                     
                 
-                <p>Additional arguments which are passed as-is to the contructor of the
+                <p>Additional arguments which are passed as-is to the constructor of the
 given option class. Refer to the class specific constructor
 documentation for details.</p></td>
         </tr>
@@ -5168,7 +5156,7 @@ descendent of <code>AbstractValue</code>.</p>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line927">line 927</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line931">line 931</a>
         </div>
         
     </div>
@@ -5183,7 +5171,7 @@ descendent of <code>AbstractValue</code>.</p>
 <p>The <code>parse()</code> function recursively walks the section element tree and
 triggers input value reading and validation for each encountered child
 option element.</p>
-<p>Options which are hidden due to unsatisified dependencies are skipped.</p>
+<p>Options which are hidden due to unsatisfied dependencies are skipped.</p>
     </div>
     
 
@@ -5379,7 +5367,7 @@ the form element's markup, including the markup of any child elements.</td>
             
                 <span class="inherited"><a href="LuCI.form.AbstractElement.html#stripTags">inherited</a></span>
             
-            stripTags<span class="signature">(input)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{string}</span>
+            stripTags<span class="signature">(s)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{string}</span>
         </h4>
     
         
@@ -5426,7 +5414,7 @@ the form element's markup, including the markup of any child elements.</td>
 	
         <tr>
             
-                <td class="name"><code>input</code></td>
+                <td class="name"><code>s</code></td>
             
             
             <td class="type">
@@ -5507,7 +5495,7 @@ the form element's markup, including the markup of any child elements.</td>
                         
                     
             </td>
-            <td class="description last">The cleaned input string with HTML removes removed.</td>
+            <td class="description last">The cleaned input string with HTML tags removed.</td>
         </tr>
     
     </tbody>
@@ -5529,7 +5517,7 @@ the form element's markup, including the markup of any child elements.</td>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line968">line 968</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line972">line 972</a>
         </div>
         
     </div>
@@ -5709,7 +5697,7 @@ contents. If omitted, no description will be rendered.</p></td>
 <dl>
     <dt>
         <div class="param-desc">
-        <p>Throws an exeption if a tab with the same <code>name</code> already exists.</p>
+        <p>Throws an exception if a tab with the same <code>name</code> already exists.</p>
         </div>
     </dt>
     <dt>
@@ -5741,12 +5729,12 @@ contents. If omitted, no description will be rendered.</p></td>
     <div class="nameContainer">
         <h4 class="name" id="taboption">
             
-            taboption<span class="signature">(tabname, optionclass, classargs)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="LuCI.form.AbstractValue.html">LuCI.form.AbstractValue</a>}</span>
+            taboption<span class="signature">(tabName, optionclass, classargs)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="LuCI.form.AbstractValue.html">LuCI.form.AbstractValue</a>}</span>
         </h4>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1048">line 1048</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line1052">line 1052</a>
         </div>
         
     </div>
@@ -5788,7 +5776,7 @@ contents. If omitted, no description will be rendered.</p></td>
 	
         <tr>
             
-                <td class="name"><code>tabname</code></td>
+                <td class="name"><code>tabName</code></td>
             
             
             <td class="type">
@@ -5839,7 +5827,7 @@ contents. If omitted, no description will be rendered.</p></td>
                 
                 <p>The option class to use for rendering the configuration option. Note
 that this value must be the class itself, not a class instance obtained
-from calling <code>new</code>. It must also be a class dervied from
+from calling <code>new</code>. It must also be a class derived from
 <a href="LuCI.form.AbstractSection.html"><code>LuCI.form.AbstractSection</code></a>.</p></td>
         </tr>
 	
@@ -5870,7 +5858,7 @@ from calling <code>new</code>. It must also be a class dervied from
                         <span class="repeatable">repeatable</span>
                     
                 
-                <p>Additional arguments which are passed as-is to the contructor of the
+                <p>Additional arguments which are passed as-is to the constructor of the
 given option class. Refer to the class specific constructor
 documentation for details.</p></td>
         </tr>
@@ -6015,7 +6003,7 @@ descendent of <code>AbstractValue</code>.</p>
     
         
         <div class="tag-source">
-            <a href="form.js.html">form.js</a>, <a href="form.js.html#line321">line 321</a>
+            <a href="form.js.html">form.js</a>, <a href="form.js.html#line325">line 325</a>
         </div>
         
     </div>
@@ -6216,7 +6204,7 @@ was neither a string nor a function.</td>
         
 
         <footer>
-            Documentation generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Wed Jan 12 2022 11:47:04 GMT+0000 (Coordinated Universal Time)
+            Documentation generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> on Fri Mar 29 2024 06:58:10 GMT+0000 (Coordinated Universal Time)
         </footer>
     </div>
 </div>
